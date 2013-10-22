@@ -4,8 +4,11 @@ var FARM = FARM || {};
 FARM.Arena = function Arena() {
     Arena.superclass.constructor.call(this);
 
-    this.isMouseEnabled = true;
-    //this.isTouchEnabled = true;
+    if (cc.Director.sharedDirector.isTouchScreen) {        
+        //this.isTouchEnabled = true;
+    } else {
+        this.isMouseEnabled = true;    
+    }
 
     this.size = cc.Director.sharedDirector.winSize;
     this.nextGenderIsMale = true;

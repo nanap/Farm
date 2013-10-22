@@ -8,6 +8,8 @@
         director.isKeyboardEnabled = true;
         director.backgroundColor = 'rgb(90, 190, 40)';
 
+        
+
         scene = new cc.Scene();
         layer = new FARM.Arena();
 
@@ -17,8 +19,8 @@
         FARM.Game.addMessage('Click to make a cow!');
 
         document.onclick = function(e) {
-            FARM.Game.removeMessage();               
-        }
+            //FARM.Game.removeMessage();               
+        };
 
         director.runWithScene(scene); 
 
